@@ -1,7 +1,7 @@
 # Intelsense-Ai
 
-1. open cmd and install scrapy using pip 
-   pip install scrapy
+1. open cmd and install scrapy using pip
+   "pip install scrapy"
 
 2. Go to Daraz Scrapper\daraz_scrapper\daraz_scrapper\spiders\jack_da_scrapper.py
 
@@ -16,7 +16,8 @@
 6. Now go to a product link in daraz you want to scrape. Example:
    "https://www.daraz.com.bd/products/samsung-galaxy-note-20-ultra-69-1440x3088-pixels-108mp-
    camera-12gb-ram-exynos-990-4500-mah-battery-i134710726-s1056614066.html?spm=a2a0e.searchlistcategory.list.3.648f585erDIRQQ&search=1"
-   you can get the itemId from this link. The item id is situated between "-i" and "-s" in the link. Now copy the itemId. For this example above, the item id is 134710726
+   you can get the itemId from this link. The item id is situated between "-i" and "-s" in the link. Now copy the itemId. 
+   For this example above, the item id is 134710726
    
 7. Now go back to "start_urls" in jack_da_scrapper.py
 
