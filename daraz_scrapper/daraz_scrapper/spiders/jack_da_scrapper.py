@@ -4,7 +4,8 @@ class jack_da_scrapper(scrapy.Spider):
     name = "jack"
     start_urls = [
         "https://my.daraz.com.bd/pdp/review/getReviewList?itemId=133166583&pageSize=200&filter=0&sort=0&pageNo=",
-        "https://my.daraz.com.bd/pdp/review/getReviewList?itemId=133210201&pageSize=200&filter=0&sort=0&pageNo="
+        "https://my.daraz.com.bd/pdp/review/getReviewList?itemId=133210201&pageSize=200&filter=0&sort=0&pageNo=",
+        "https://my.daraz.com.bd/pdp/review/getReviewList?itemId=131778652&pageSize=200&filter=0&sort=0&pageNo="
     ]
 
     def write_data(self, raw_data, filename):
@@ -18,6 +19,7 @@ class jack_da_scrapper(scrapy.Spider):
         review = []
 
         for item in item_data:
+            itemId = item["itemId"]
             itemTitle = item["itemTitle"]
             buyerName = item["buyerName"]
             rating = item["rating"]
@@ -32,12 +34,14 @@ class jack_da_scrapper(scrapy.Spider):
             review.append(a_review)
 
         data = {
+            "productId": itemId,
             "product_name" : itemTitle,
             "reviews" : review
         }
 
-        filename = "Review_Data" + "/"+  (itemTitle.replace("/", "")).replace(" ", "") + ".json"
+        filename = "Review_Data/" + str(itemId) + ".json"
 
+        #write review data 
         self.write_data(data,filename)
 
         
