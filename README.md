@@ -33,3 +33,10 @@
     
 12. All the links will be scrapped and stored in the "Review_Data" flolder
    
+   
+THings daraz crapper wil scrap :
+Item Name
+buyerName
+rating
+review content
+replies
