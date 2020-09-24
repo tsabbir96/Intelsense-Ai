@@ -1,4 +1,4 @@
-# Intelsense-Ai
+# Daraz-scrapper
 
 1. open cmd and install scrapy using pip
    "pip install scrapy"
